@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=3 python train_ddp.py \
+--batch_size=2 \
+--exp_name=test_single_5 \
+--epoch_num=1000 \
+--learning_rate=1e-4 \
+--use_occluded_loss \
+--use_flow_loss \
+--occupancy_weight=10 \
+--flow_weight=0.01 \
+--train_preprocessed_file_path='/GPFS/rhome/ziwang/projects/occupancy_flow/dataset/tmp_train' \
+--val_preprocessed_file_path='/GPFS/rhome/ziwang/projects/occupancy_flow/dataset/tmp_train'
